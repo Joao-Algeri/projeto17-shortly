@@ -17,9 +17,8 @@ export async function signUp(req, res) {
 
     res.sendStatus(201)
 
-  } catch (error) {
-    console.log(error)
-    res.status(500).send(error.message)
+  } catch (error) {    
+    res.send(error.message)
   }
 
 }
@@ -50,8 +49,7 @@ export async function getMyUser(req, res) {
         shortenedUrls
       })
   
-    } catch (error) {
-      console.log(error)
+    } catch (error) {      
       res.status(500).send(error.message)
     }
   
@@ -71,8 +69,7 @@ export async function getMyUser(req, res) {
   
       res.send(rows)
   
-    } catch (error) {
-      console.log(error)
+    } catch (error) {      
       res.status(500).send(error.message)
     }
   
